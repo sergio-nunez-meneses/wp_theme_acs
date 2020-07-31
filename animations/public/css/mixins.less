@@ -1,0 +1,26 @@
+.flex(@direction) {
+  display: flex;
+  flex-direction: @direction;
+  flex-wrap: wrap;
+}
+
+.crt-flicker() {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.text-flicker() {
+  content: attr(data-text);
+  top: 0;
+  left: -2px;
+  background: black;
+  position: absolute;
+  overflow: hidden;
+}
